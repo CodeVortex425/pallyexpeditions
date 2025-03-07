@@ -1,0 +1,174 @@
+#contact {
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  gap:20px;
+  z-index: 1000;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #8d7f6c;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item:hover {
+  color: #8d7f6c;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+.location {
+  margin-top: 50px;
+}
+
+.location iframe {
+  border: 0;
+  border-radius: 10px;
+}
+
+.social-media a {
+  margin-right: 20px;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+}
+
+.social-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #007bff; /* Default color */
+}
+
+.social-icon:hover svg {
+  fill: #1da1f2; /* Change color on hover */
+}
+
+.social-icon:first-child svg {
+  fill: #e4405f; /* Instagram color */
+}
+
+.social-icon:nth-child(2) svg {
+  fill: #1d9bf0; /* X (formerly Twitter) color */
+}
+
+.social-icon:last-child svg {
+  fill: #1877f2; /* Facebook color */
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.facebook,
+.instagram {
+  width: 30px;
+}

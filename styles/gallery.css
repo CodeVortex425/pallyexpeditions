@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+header {
+  background: #4CAF50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #8d7f6c;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item:hover {
+  color: #8d7f6c;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}

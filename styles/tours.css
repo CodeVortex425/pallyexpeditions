@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  gap:20px;
+  z-index: 1000;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #8d7f6c;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item:hover {
+  color: #8d7f6c;
+}
+
+section {
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 100px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #FF5722;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background-color: #e64a19;
+}
+
+/* Tour Categories */
+.tour-categories {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.category-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.category {
+  width: 22%;
+  margin: 20px;
+  text-align: center;
+}
+
+.category img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.category h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+/* Featured Tours */
+.featured-tours {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.tour-card {
+  width: 30%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.tour-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.tour-card h3 {
+  font-size: 1.6em;
+  margin: 15px 0;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #f2f2f2;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.reason {
+  width: 30%;
+  margin: 20px;
+}
+
+.reason img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* Customer Reviews */
+.customer-reviews {
+  background-color: #ececec;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review {
+  width: 45%;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact & Booking */
+.contact-booking {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.contact-booking form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-booking input,
+.contact-booking textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-booking button {
+  background-color: #FF5722;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-booking button:hover {
+  background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  width: 30px;
+}

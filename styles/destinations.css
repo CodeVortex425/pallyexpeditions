@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & Background */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  gap:20px;
+  z-index: 1000;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background-color: #8d7f6c;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-item:hover {
+  color: #8d7f6c;
+}
+
+/* Destinations Section */
+.destinations {
+  margin-top: 90px;
+  padding: 20px;
+  text-align: center;
+}
+
+.destinations h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.destinations p {
+  margin-bottom: 20px;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filter label {
+  font-size: 1em;
+}
+
+.filter select {
+  padding: 5px;
+  font-size: 1em;
+}
+
+/* Destination Cards */
+.destination-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  margin: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.card p {
+  padding: 0 10px 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-media a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  text-decoration: underline;
+}

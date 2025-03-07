@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pally Expeditions</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/pallyExpeditions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="nav-header">
+      <div class="nav-header-left-section">
+        <div class="header-link">
+          <span class="brand-name">Pally</span>
+          <span class="niche">Expeditions</span>
+        </div>
+      </div>
+
+      <div class="nav-header-middle-section">
+        <a href="#home" class="nav-item">Home</a>
+        <a href="destination.html" class="nav-item">Destinations</a>
+        <a href="#tours" class="nav-item">Tours</a>
+        <a href="#gallery" class="nav-item">Gallery</a>
+        <a href="contactUs.html" class="nav-item">Contact Us</a>
+      </div>
+
+      <div class="nav-header-right-section">
+        <div class="nav-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <section id="home">
+    <div class="description-grid">
+      <div class="description">
+        <h1 class="description-head">
+          Join us on an unforgettable <span class="highlight">PallyExpeditions</span> adventure!
+        </h1>
+        <p>it's the perfect time to embark on a thrilling journey, discover hidden gems, and create lifelong memories. Experience the beauty ,excitement, and culture like never before.</p>
+        <button class="discover-button">
+          Discover More Today!
+        </button>
+      </div>
+    </div>
+    </section>
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+            let currentIndex = 0;
+            const images = [
+            'images/pic.jpg',
+            'images/Giraffe in the Bush with Kilimanjaro - A giraffe….jpg',
+            'images/luxury beach resort.jpg'
+            ];
+            const homeSection = document.getElementById("home");
+
+            function changeBackground() {
+                homeSection.style.backgroundImage = `url('${images[currentIndex]}')`;
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // Change background every 5 seconds
+            setInterval(changeBackground, 5000);
+            changeBackground();
+        });
+    </script>
+  </body>
+</html>
