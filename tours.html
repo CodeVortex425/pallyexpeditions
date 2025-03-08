@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Our Tours | PallyExpeditions</title>
         <link rel="stylesheet" href="styles/tours.css"> 
@@ -19,21 +20,6 @@
               <li><a href="contactUs.html" class="nav-item">Contact Us</a></li>
             </ul>
           </nav>
-          <!--
-          <div class="language-selector">
-            <select onchange="changeLanguage(this.value)">
-                <option value="en">English</option>
-                <option value="sw">Swahili</option>
-                <option value="fr">Français</option>
-                <option value="es">Español</option>
-                <option value="de">Deutsch</option>
-                <option value="zh">中文 (Chinese)</option>
-                <option value="ru">Русский (Russian)</option>
-                <option value="ar">العربية (Arabic)</option>
-                <option value="ja">日本語 (Japanese)</option>
-            </select>
-        </div>
-    -->
         </header>
     
         <!-- Header Section (Hero Section) -->
@@ -151,28 +137,29 @@
             <option value="beach">Luxury Beach Resort - $1500</option>
           </select>
     
-          <label for="date">Select Date:</label>
-          <input type="date" id="date" name="date" required>
-    
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" required>
-    
-          <label for="email">Email Address:</label>
-          <input type="email" id="email" name="email" required>
-    
-          <label for="payment">Choose Payment Method:</label>
-          <select id="payment" name="payment" required>
-            <option value="paypal">PayPal</option>
-            <option value="mpesa">M-Pesa</option>
-          </select>
-    
-          <div id="mpesaDetails" style="display:none;">
-            <p>Send payment to <strong>0613856425</strong> and enter transaction ID below:</p>
-            <input type="text" id="mpesaTxn" name="mpesaTxn" placeholder="M-Pesa Transaction ID">
-          </div>
-    
-          <button type="submit" class="cta-button">Proceed to Payment</button>
-        </form>
+          <form action="http://localhost:3000/submit" method="POST">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+          
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <label for="payment">Choose Payment Method:</label>
+            <select id="payment" name="payment" required>
+              <option value="paypal">PayPal</option>
+              <option value="mpesa">M-Pesa</option>
+            </select>
+          
+            <div id="mpesaDetails" style="display:none;">
+              <p>Send payment to <strong>0750886425</strong> and enter transaction ID below:</p>
+              <input type="text" id="mpesaTxn" name="mpesaTxn" placeholder="M-Pesa Transaction ID">
+            </div>
+          
+            <button type="submit" class="cta-button">Proceed to Payment</button>
+          </form>
       </section>
     
       <!-- Why Choose Us Section -->
@@ -241,7 +228,7 @@
               <p>&copy; 2025 Pally Expeditions. All Rights Reserved.</p>
               <div class="social-icons">
                   <a href="#" target="_blank"><img src="svg/facebook.svg" alt="Facebook"></a>
-                  <a href="#" target="_blank"><img src="svg/instagram.svg" alt="Instagram"></a>
+                  <a href="https://www.instagram.com/pallyexpeditions/" target="_blank"><img src="svg/instagram.svg" alt="Instagram"></a>
                   <a href="#" target="_blank"><img src="svg/whatsApp.svg" alt="WhatsApp"></a>
                   <a href="#" target="_blank"><img src="svg/X.svg" alt="X"></a>
               </div>
@@ -385,6 +372,16 @@ function initMap() {
     });
   }
 
+  const paymentSelect = document.getElementById("payment");
+  const mpesaDetails = document.getElementById("mpesaDetails");
+
+  paymentSelect.addEventListener("change", function() {
+    if (paymentSelect.value === "mpesa") {
+      mpesaDetails.style.display = "block";
+    } else {
+      mpesaDetails.style.display = "none";
+    }
+  });
   </script>
 
   <script src="scripts/languages.js"></script>
