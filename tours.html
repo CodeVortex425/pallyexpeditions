@@ -1,147 +1,395 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Tours | PallyExpeditions</title>
-    <link rel="stylesheet" href="styles/tours.css"> 
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <h1>Pally Expeditions</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="pallyExpeditions.html" class="nav-item">Home</a></li>
-          <li><a href="destination.html" class="nav-item">Destinations</a></li>
-          <li><a href="tours.html" class="nav-item">Tours</a></li>
-          <li><a href="gallery.html" class="nav-item">Gallery</a></li>
-          <li><a href="contactUs.html" class="nav-item">Contact Us</a></li>
-        </ul>
-      </nav>
-    </header>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Our Tours | PallyExpeditions</title>
+        <link rel="stylesheet" href="styles/tours.css"> 
+      </head>
+      <body>
+        <header>
+          <div class="logo">
+            <h1>Pally Expeditions</h1>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="pallyExpeditions.html" class="nav-item">Home</a></li>
+              <li><a href="destination.html" class="nav-item">Destinations</a></li>
+              <li><a href="tours.html" class="nav-item">Tours</a></li>
+              <li><a href="gallery.html" class="nav-item">Gallery</a></li>
+              <li><a href="contactUs.html" class="nav-item">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!--
+          <div class="language-selector">
+            <select onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="sw">Swahili</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="zh">中文 (Chinese)</option>
+                <option value="ru">Русский (Russian)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="ja">日本語 (Japanese)</option>
+            </select>
+        </div>
+    -->
+        </header>
+    
+        <!-- Header Section (Hero Section) -->
+        <section class="hero-section" style="background-image: url('images/serengeti2.jpg');">
+          <div class="hero-content">
+              <h1>Explore Breathtaking Adventures with Pally Expeditions</h1>
+              <p>Discover the world’s most exciting destinations with us!</p>
+              <a href="#tour-booking" class="cta-button">Book Your Tour Now</a>
+          </div>
+      </section>
+    
+      <!-- Tour Categories Section -->
+      <section class="tour-categories">
+          <h2>Our Popular Tour Categories</h2>
+          <div class="category-container">
+              <div class="category">
+                  <img src="images//6 Days Tanzania Lodge Safari.jpg" alt="Adventure Tours">
+                  <h3>Adventure Tours</h3>
+                  <p>Hiking, Safari, Rafting, and more!</p>
+              </div>
+              <div class="category">
+                  <img src="images/black girl travel (1).jpg" alt="Cultural Tours">
+                  <h3>Cultural Tours</h3>
+                  <p>Experience history, art, and local cultures.</p>
+              </div>
+              <div class="category">
+                  <img src="images/Enjoy your safari in Tanzania with Mozee Tanzania….jpg" alt="Luxury Tours">
+                  <h3>Luxury Tours</h3>
+                  <p>Private safaris, beach resorts, and luxury experiences.</p>
+              </div>
+              <div class="category">
+                  <img src="images/Tanzania Family Safari Holidays.jpg" alt="Budget Tours">
+                  <h3>Budget-Friendly Tours</h3>
+                  <p>Affordable group tours, backpacking trips, and more.</p>
+              </div>
+          </div>
+      </section>
 
-    <!-- Header Section (Hero Section) -->
-    <section class="hero-section" style="background-image: url('styles/pic.jpg');">
-      <div class="hero-content">
-          <h1>Explore Breathtaking Adventures with Pally Expeditions</h1>
-          <p>Discover the world’s most exciting destinations with us!</p>
-          <a href="#tour-booking" class="cta-button">Book Your Tour Now</a>
-      </div>
-  </section>
+      <section class="search-bar">
+        <input type="text" id="tourSearch" placeholder="Search Tours..." onkeyup="searchTours()">
+    </section>
+    
+      <!-- Featured Tours Section -->
+      <section class="featured-tours">
+          <h2>Featured Tours</h2>
+          <div class="tour-card">
+              <img src="images/Safari Tours in Africa.jpg" alt="Tour 1">
+              <h3>Safari Adventure</h3>
+              <p>5 Days of thrilling safari experiences in Tanzania.</p>
+              <p><strong>Price: $500</strong></p>
+              <a href="#tour-booking" class="cta-button">Book Now</a>
+          </div>
+          <div class="tour-card">
+              <img src="images/maasai Cultural tour.jpg" alt="Tour 2">
+              <h3>Maasai Cultural Tour</h3>
+              <p>Visit traditional Maasai villages and learn their customs.</p>
+              <p><strong>Price: $350</strong></p>
+              <a href="#tour-booking" class="cta-button">Book Now</a>
+          </div>
+          <div class="tour-card">
+              <img src="images/luxury beach resort.jpg" alt="Tour 3">
+              <h3>Luxury Beach Resort</h3>
+              <p>Relax at a world-class beach resort for 7 days.</p>
+              <p><strong>Price: $1500</strong></p>
+              <a href="#tour-booking" class="cta-button">Book Now</a>
+          </div>
+      </section>
 
-  <!-- Tour Categories Section -->
-  <section class="tour-categories">
-      <h2>Our Popular Tour Categories</h2>
-      <div class="category-container">
-          <div class="category">
-              <img src="images//6 Days Tanzania Lodge Safari.jpg" alt="Adventure Tours">
-              <h3>Adventure Tours</h3>
-              <p>Hiking, Safari, Rafting, and more!</p>
-          </div>
-          <div class="category">
-              <img src="images/black girl travel (1).jpg" alt="Cultural Tours">
-              <h3>Cultural Tours</h3>
-              <p>Experience history, art, and local cultures.</p>
-          </div>
-          <div class="category">
-              <img src="images/Enjoy your safari in Tanzania with Mozee Tanzania….jpg" alt="Luxury Tours">
-              <h3>Luxury Tours</h3>
-              <p>Private safaris, beach resorts, and luxury experiences.</p>
-          </div>
-          <div class="category">
-              <img src="images/Tanzania Family Safari Holidays.jpg" alt="Budget Tours">
-              <h3>Budget-Friendly Tours</h3>
-              <p>Affordable group tours, backpacking trips, and more.</p>
-          </div>
-      </div>
-  </section>
+      <section id="google-map">
+        <h2>Find Us Here</h2>
+        <!-- Map container (this is where the map will appear) -->
+        <div id="map" style="height: 400px; width: 100%;"></div>
+      </section>
 
-  <!-- Featured Tours Section -->
-  <section class="featured-tours">
-      <h2>Featured Tours</h2>
-      <div class="tour-card">
-          <img src="images/Safari Tours in Africa.jpg" alt="Tour 1">
-          <h3>Safari Adventure</h3>
-          <p>5 Days of thrilling safari experiences in Tanzania.</p>
-          <p><strong>Price: $500</strong></p>
-          <a href="#tour-booking" class="cta-button">Book Now</a>
-      </div>
-      <div class="tour-card">
-          <img src="images/maasai Cultural tour.jpg" alt="Tour 2">
-          <h3>Maasai Cultural Tour</h3>
-          <p>Visit traditional Maasai villages and learn their customs.</p>
-          <p><strong>Price: $350</strong></p>
-          <a href="#tour-booking" class="cta-button">Book Now</a>
-      </div>
-      <div class="tour-card">
-          <img src="images/luxury beach resort.jpg" alt="Tour 3">
-          <h3>Luxury Beach Resort</h3>
-          <p>Relax at a world-class beach resort for 7 days.</p>
-          <p><strong>Price: $1500</strong></p>
-          <a href="#tour-booking" class="cta-button">Book Now</a>
-      </div>
-  </section>
+     
 
-  <!-- Why Choose Us Section -->
-  <section class="why-choose-us">
-      <h2>Why Choose Us?</h2>
-      <div class="reasons">
-          <div class="reason">
-              <img src="svg/guide.svg" alt="Expert Guides">
-              <p>Expert Local Guides</p>
+      <section class="price-calculator">
+        <h2>Calculate Your Tour Price</h2>
+        <form id="price-form">
+            <label for="tour-type">Select Tour Type:</label>
+            <select id="tour-type" name="tour-type" required>
+                <option value="adventure">Adventure Tour</option>
+                <option value="cultural">Cultural Tour</option>
+                <option value="luxury">Luxury Tour</option>
+                <option value="budget">Budget-Friendly Tour</option>
+            </select>
+    
+            <label for="num-people">Number of People:</label>
+            <input type="number" id="num-people" name="num-people" min="1" value="1" required>
+    
+            <label for="extras">Additional Services:</label>
+            <div class="extras">
+                <label>
+                    <input type="checkbox" name="extras" value="guide"> Expert Guide (+$50)
+                </label>
+                <label>
+                    <input type="checkbox" name="extras" value="transport"> Transportation (+$100)
+                </label>
+            </div>
+    
+            <button type="button" onclick="calculatePrice()">Calculate Price</button>
+        </form>
+    
+        <h3>Total Price: $<span id="total-price">0</span></h3>
+    </section>
+    
+      <!-- Booking Section (Booking Form) -->
+      <section class="booking" id="tour-booking">
+        <h2>Book Your Tour Now</h2>
+        <form id="bookingForm">
+          <label for="tour">Choose a Tour:</label>
+          <select id="tour" name="tour" required>
+            <option value="safari">Safari Adventure - $500</option>
+            <option value="maasai">Maasai Cultural Tour - $350</option>
+            <option value="beach">Luxury Beach Resort - $1500</option>
+          </select>
+    
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required>
+    
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+    
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="payment">Choose Payment Method:</label>
+          <select id="payment" name="payment" required>
+            <option value="paypal">PayPal</option>
+            <option value="mpesa">M-Pesa</option>
+          </select>
+    
+          <div id="mpesaDetails" style="display:none;">
+            <p>Send payment to <strong>0613856425</strong> and enter transaction ID below:</p>
+            <input type="text" id="mpesaTxn" name="mpesaTxn" placeholder="M-Pesa Transaction ID">
           </div>
-          <div class="reason">
-              <img src="svg/Affordable Package.svg" alt="Affordable Packages">
-              <p>Affordable & Flexible Packages</p>
+    
+          <button type="submit" class="cta-button">Proceed to Payment</button>
+        </form>
+      </section>
+    
+      <!-- Why Choose Us Section -->
+      <section class="why-choose-us">
+          <h2>Why Choose Us?</h2>
+          <div class="reasons">
+              <div class="reason">
+                  <img src="svg/guide.svg" alt="Expert Guides">
+                  <p>Expert Local Guides</p>
+              </div>
+              <div class="reason">
+                  <img src="svg/Affordable Package.svg" alt="Affordable Packages">
+                  <p>Affordable & Flexible Packages</p>
+              </div>
+              <div class="reason">
+                  <img src="svg/eco friendly.svg" alt="Eco-Friendly">
+                  <p>Eco-Friendly & Sustainable Tourism</p>
+              </div>
           </div>
-          <div class="reason">
-              <img src="svg/eco friendly.svg" alt="Eco-Friendly">
-              <p>Eco-Friendly & Sustainable Tourism</p>
+      </section>
+    
+      <!-- Customer Reviews Section -->
+      <section class="customer-reviews">
+          <h2>Customer Reviews</h2>
+          <div class="reviews">
+              <div class="review">
+                <p><strong>John Doe</strong> - Safari Adventure</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+                <p>"Amazing experience! Highly recommend Pally Expeditions!"</p>
+            </div>
+            <div class="review">
+                <p><strong>Jane Smith</strong> - Maasai Cultural Tour</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+                <p>"The Maasai tour was life-changing. Will definitely come back!"</p>
+              </div>
           </div>
-      </div>
-  </section>
+      </section>
 
-  <!-- Customer Reviews Section -->
-  <section class="customer-reviews">
-      <h2>Customer Reviews</h2>
-      <div class="reviews">
-          <div class="review">
-              <p>"Amazing experience! Highly recommend Pally Expeditions!"</p>
-              <p><strong>⭐⭐⭐⭐⭐</strong></p>
+      <section class="user-reviews">
+        <h2>Submit Your Review</h2>
+        <form id="review-form">
+            <input type="text" id="user-name" placeholder="Your Name" required><br>
+            <select id="tour-name" required>
+                <option value="">Select Tour</option>
+                <option value="Safari Adventure">Safari Adventure</option>
+                <option value="Maasai Cultural Tour">Maasai Cultural Tour</option>
+                <option value="Luxury Beach Resort">Luxury Beach Resort</option>
+            </select><br>
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="">Rate your experience</option>
+                <option value="1">1 Star</option>
+                <option value="2">2 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="5">5 Stars</option>
+            </select><br>
+            <textarea id="review-text" placeholder="Write your review..." required></textarea><br>
+            <button type="submit" class="cta-button">Submit Review</button>
+        </form>
+    </section>
+    
+      <!-- Footer Section -->
+      <footer>
+          <div class="footer-content">
+              <p>&copy; 2025 Pally Expeditions. All Rights Reserved.</p>
+              <div class="social-icons">
+                  <a href="#" target="_blank"><img src="svg/facebook.svg" alt="Facebook"></a>
+                  <a href="#" target="_blank"><img src="svg/instagram.svg" alt="Instagram"></a>
+                  <a href="#" target="_blank"><img src="svg/whatsApp.svg" alt="WhatsApp"></a>
+                  <a href="#" target="_blank"><img src="svg/X.svg" alt="X"></a>
+              </div>
           </div>
-          <div class="review">
-              <p>"The Maasai tour was life-changing. Will definitely come back!"</p>
-              <p><strong>⭐⭐⭐⭐⭐</strong></p>
-          </div>
-      </div>
-  </section>
+      </footer>
+    
+      <script>
+        document.getElementById("payment").addEventListener("change", function() {
+          if (this.value === "mpesa") {
+            document.getElementById("mpesaDetails").style.display = "block";
+          } else {
+            document.getElementById("mpesaDetails").style.display = "none";
+          }
+        });
+    
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+          event.preventDefault();
+          let paymentMethod = document.getElementById("payment").value;
+          if (paymentMethod === "paypal") {
+            window.location.href = "https://www.paypal.com/paypalme/yourpaypalaccount";
+          } else {
+            alert("M-Pesa payment recorded. We will verify your transaction.");
+          }
+        });
 
-  <!-- Contact & Booking Section -->
-  <section class="contact-booking" id="tour-booking">
-      <h2>Contact & Book Your Tour</h2>
-      <form action="#">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <input type="text" placeholder="Preferred Tour" required>
-          <textarea placeholder="Message" required></textarea>
-          <button type="submit" class="cta-button">Send Inquiry</button>
-      </form>
-  </section>
+        document.getElementById('review-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent the page from reloading
 
-  <!-- Footer Section -->
-  <footer>
-      <div class="footer-content">
-          <p>&copy; 2025 Pally Expeditions. All Rights Reserved.</p>
-          <div class="social-icons">
-              <a href="#" target="_blank"><img src="svg/facebook.svg" alt="Facebook"></a>
-              <a href="#" target="_blank"><img src="svg/instagram.svg" alt="Instagram"></a>
-              <a href="#" target="_blank"><img src="svg/whatsApp.svg" alt="WhatsApp"></a>
-              <a href="#"
-              target="_blank"><img src="svg/X.svg"></a>
-          </div>
-      </div>
-  </footer>
+    // Get user input values
+    const userName = document.getElementById('user-name').value;
+    const tourName = document.getElementById('tour-name').value;
+    const rating = document.getElementById('rating').value;
+    const reviewText = document.getElementById('review-text').value;
+
+    // Create a new review element
+    const reviewContainer = document.createElement('div');
+    reviewContainer.classList.add('review');
+
+    reviewContainer.innerHTML = `
+        <p><strong>${userName}</strong> - ${tourName}</p>
+        <p>Rating: ${'⭐'.repeat(rating)}</p>
+        <p>${reviewText}</p>
+    `;
+
+    // Append the new review to the reviews section
+    document.querySelector('.reviews').appendChild(reviewContainer);
+
+    // Reset form after submission
+    document.getElementById('review-form').reset();
+});
+
+function searchTours() {
+    var input, filter, tours, tourCards, title, i, txtValue;
+    input = document.getElementById('tourSearch');
+    filter = input.value.toUpperCase();
+    tours = document.querySelector('.featured-tours');
+    tourCards = tours.getElementsByClassName('tour-card');
+
+    for (i = 0; i < tourCards.length; i++) {
+        title = tourCards[i].getElementsByTagName("h3")[0];
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tourCards[i].style.display = "";
+        } else {
+            tourCards[i].style.display = "none";
+        }
+    }
+}
+
+document.getElementById('priceForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+
+    // Get the input values
+    var numPeople = document.getElementById('numPeople').value;
+    var numDays = document.getElementById('numDays').value;
+    var luxuryPackage = document.getElementById('luxury').checked;
+
+    // Basic price calculations (for example, $100 per person per day)
+    var basePrice = 100;
+    var luxuryPrice = luxuryPackage ? 200 : 0;
+
+    var totalPrice = basePrice * numPeople * numDays + luxuryPrice;
+
+    // Display the calculated price
+    document.getElementById('priceAmount').textContent = totalPrice;
+});
+
+function calculatePrice() {
+    const tourType = document.getElementById('tour-type').value;
+    const numPeople = document.getElementById('num-people').value;
+    const extras = document.querySelectorAll('input[name="extras"]:checked');
+    let price = 0;
+
+    // Base prices for different tour types
+    switch (tourType) {
+        case 'adventure':
+            price = 500;
+            break;
+        case 'cultural':
+            price = 350;
+            break;
+        case 'luxury':
+            price = 1500;
+            break;
+        case 'budget':
+            price = 200;
+            break;
+    }
+
+    // Additional charges for extra services
+    extras.forEach(extra => {
+        if (extra.value === 'guide') {
+            price += 50;
+        } else if (extra.value === 'transport') {
+            price += 100;
+        }
+    });
+
+    // Price per person
+    price *= numPeople;
+
+    // Update total price
+    document.getElementById('total-price').textContent = price.toFixed(2);
+}
+
+function initMap() {
+    // Coordinates for the map (this example uses Arusha's location)
+    var location = { lat: -3.3869, lng: 36.6829 };
+    
+    // Create the map
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,  // Zoom level (you can adjust it)
+      center: location  // Map's center
+    });
+
+    // Add a marker for the location
+    var marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      title: 'Pally Expeditions'  // The text shown when you hover over the marker
+    });
+  }
+
+  </script>
+
+  <script src="scripts/languages.js"></script>
 
   </body>
+  <div id="map" style="height: 400px; width: 100%;"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTXeJy-lwnL2U5pguzx4oBsK3PILYSj4Q&callback=initMap" async defer></script>
 </html>

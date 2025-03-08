@@ -27,6 +27,18 @@
         <a href="contactUs.html" class="nav-item">Contact Us</a>
       </div>
 
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="sw">Swahili</option>
+        <option value="fr">French</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="zh">Chinese</option>
+        <option value="ru">Russian</option>
+        <option value="ar">Arabic</option>
+        <option value="ja">Japanese</option>
+      </select>
+
       <div class="nav-header-right-section">
         <div class="nav-icon">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -79,6 +91,63 @@
               navMenu.classList.toggle("show-menu");
            });
         });
+
+        const translations = {
+        en: { home: "Home", destinations: "Destinations", tours: "Tours", gallery: "Gallery", contact: "Contact Us", "hero-title": "Explore Breathtaking Adventures with Pally Expeditions", "hero-text": "Discover the world’s most exciting destinations with us!", "book-now": "Book Your Tour Now" },
+        sw: { home: "Nyumbani", destinations: "Maeneo", tours: "Safari", gallery: "Picha", contact: "Wasiliana Nasi", "hero-title": "Gundua Matembezi ya Kuvutia na Pally Expeditions", "hero-text": "Gundua maeneo bora zaidi duniani nasi!", "book-now": "Weka Safari Yako Sasa" },
+        fr: { home: "Accueil", destinations: "Destinations", tours: "Circuits", gallery: "Galerie", contact: "Contactez-nous", "hero-title": "Explorez des Aventures à Couper le Souffle avec Pally Expeditions", "hero-text": "Découvrez les destinations les plus excitantes du monde avec nous!", "book-now": "Réservez Votre Voyage Maintenant" },
+        es: { home: "Inicio", destinations: "Destinos", tours: "Tours", gallery: "Galería", contact: "Contáctenos", "hero-title": "Explora Aventuras Impresionantes con Pally Expeditions", "hero-text": "¡Descubre los destinos más emocionantes del mundo con nosotros!", "book-now": "Reserva tu Tour Ahora" },
+        de: { home: "Startseite", destinations: "Ziele", tours: "Touren", gallery: "Galerie", contact: "Kontakt", "hero-title": "Erleben Sie atemberaubende Abenteuer mit Pally Expeditions", "hero-text": "Entdecken Sie mit uns die aufregendsten Reiseziele der Welt!", "book-now": "Buchen Sie Ihre Tour Jetzt" },
+        zh: { home: "首页", destinations: "目的地", tours: "旅游", gallery: "画廊", contact: "联系我们", "hero-title": "与 Pally Expeditions 一起探索惊险的冒险", "hero-text": "与我们一起探索世界上最令人兴奋的目的地!", "book-now": "立即预订您的旅游" },
+        ru: { home: "Главная", destinations: "Направления", tours: "Туры", gallery: "Галерея", contact: "Свяжитесь с нами", "hero-title": "Исследуйте Захватывающие Приключения с Pally Expeditions", "hero-text": "Откройте для себя самые захватывающие направления в мире с нами!", "book-now": "Забронируйте Тур Сейчас" },
+        ar: { home: "الرئيسية", destinations: "الوجهات", tours: "الجولات", gallery: "المعرض", contact: "اتصل بنا", "hero-title": "استكشف مغامرات مذهلة مع Pally Expeditions", "hero-text": "اكتشف أكثر الوجهات إثارة في العالم معنا!", "book-now": "احجز رحلتك الآن" },
+        ja: { home: "ホーム", destinations: "目的地", tours: "ツアー", gallery: "ギャラリー", contact: "お問い合わせ", "hero-title": "Pally Expeditions と一緒に息をのむ冒険を探検", "hero-text": "私たちと一緒に世界で最もエキサイティングな目的地を発見しましょう！", "book-now": "今すぐツアーを予約" }
+      };
+
+      $(document).ready(function() {
+        $('#language-selector').change(function() {
+          let lang = $(this).val();
+          $('[data-translate]').each(function() {
+            let key = $(this).attr('data-translate');
+            $(this).text(translations[lang][key]);
+          });
+        });
+      });
     </script>
   </body>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/255613856425" target="_blank" class="whatsapp-button">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp" />
+  </a>
+
+  <style>
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .whatsapp-button img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #128C7E;
+    }
+  </style>
+
+  <script>
+   
+  </script>
+
 </html>
